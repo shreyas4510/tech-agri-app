@@ -44,13 +44,13 @@ export const homeStyle = StyleSheet.create({
     },
     login_register_modal : {
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         position: 'absolute',
         bottom: 0,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         padding: 24,
-        borderColor : 'green',
+        borderColor : colors.primary_green,
         borderWidth : 2,
         borderBottomWidth : 0
     },
@@ -60,7 +60,7 @@ export const homeStyle = StyleSheet.create({
         alignSelf : 'center',
         position: 'absolute',
         marginTop : -35,
-        borderColor : '#0bab64',
+        borderColor : colors.primary_green,
         borderWidth : 2 
     },
     login_card_wrapper_style : { 
@@ -81,22 +81,22 @@ export const homeStyle = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         marginVertical: 20,
-        color: '#0bab64',
+        color: colors.primary_green,
     },
     error_state : {
-        color: 'red', 
+        color: colors.text_error, 
         width: '100%', 
         fontWeight: 'bold'
     },
     slogan_style : {
         margin: 20,
         fontStyle: 'italic',
-        color: '#000',
+        color: colors.muted_text,
         fontWeight: 'bold',
     },
     disable_signup_button : {
         elevation: 8,
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         borderRadius: 5,
         margin: 20,
         marginBottom: 10,
@@ -106,7 +106,7 @@ export const homeStyle = StyleSheet.create({
     },
     enabled_signup_button : {
         elevation: 8,
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         borderRadius: 5,
         margin: 20,
         marginBottom: 10,
@@ -119,7 +119,7 @@ export const homeStyle = StyleSheet.create({
     },
     signup_button_text_style : {
         fontSize: 14,
-        color: 'white',
+        color: colors.white,
         fontWeight: 'bold',
         alignSelf: 'center',
     },
@@ -127,5 +127,32 @@ export const homeStyle = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 'auto',
         fontSize: 15,
+    },
+    otp_style : { 
+        height: 60, 
+        width: '95%' 
+    },
+    code_input_field_style : {
+        width: 30,
+        height: 45,
+        color: colors.black,
+        borderColor: colors.dark_green,
+        minWidth : 45,
+        borderRadius : 5,
+    },
+    code_input_field_highlight : { 
+        borderColor: colors.verify_button_primary 
+    },
+    resend_style : { 
+        fontWeight: 'bold', 
+        color: colors.primary_green
+    },
+    resend_text : { 
+        color: colors.muted_text, 
+        fontWeight : 'bold' 
+    },
+    otp_view : { 
+        flexDirection: 'row', 
+        margin : 5 
     }
 })
