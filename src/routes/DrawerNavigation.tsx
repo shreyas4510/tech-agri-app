@@ -8,6 +8,7 @@ import IIcons from "react-native-vector-icons/Ionicons";
 import FIcons from "react-native-vector-icons/FontAwesome";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Image } from "react-native-elements";
+import Settings from "../screens/Settings/Settings";
 
 const Drawer = createDrawerNavigator();
 
@@ -56,7 +57,11 @@ export default function DrawerNavigator() {
       <Drawer.Screen
         name="Tech-agri"
         component={BottomNavigator}
-        options={{ drawerLabel: 'Home' }}
+      />
+      <Drawer.Screen
+        name="Settings"
+        component={Settings}
+        options={{ drawerLabel: 'Settings' }}
       />
     </Drawer.Navigator>
   );

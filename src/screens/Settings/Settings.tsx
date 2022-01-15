@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text } from 'react-native'
 
-export default function Test3() {
+export default function Settings() {
     return (
         <Text>
-            Two
+            Settings tab
         </Text>
     )
 }

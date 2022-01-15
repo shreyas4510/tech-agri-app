@@ -39,7 +39,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Settings"
                             onPress={() => {
-                                props.navigation.navigate("Sell")
+                                props.navigation.navigate("Settings")
                             }}
                         />
                     </Drawer.Section>

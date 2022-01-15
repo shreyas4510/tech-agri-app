@@ -1,26 +1,27 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import Test3 from '../screens/Test3';
-import React, { useMemo } from "react";
-import Test2 from '../screens/Test1';
+import React from "react";
 import AIcon from 'react-native-vector-icons/AntDesign';
 import EIcon from 'react-native-vector-icons/FontAwesome';
 import { Image } from 'react-native';
+import Menu from '../screens/Home/Menu';
+import Profile from '../screens/Profile/Profile';
+import Sells from '../screens/Sells/Sell';
 
 const Tab = createMaterialBottomTabNavigator();
 
 const BottomNavigator = ({ navigation, route  } : any) => {
   return (
     <Tab.Navigator
-      initialRouteName="Menu"
+      initialRouteName="Menu_List"
       activeColor={ '#7ac713' }
       inactiveColor={ "#6a6a6a" }
       barStyle={{ backgroundColor: '#ffffff' }}
     >
       <Tab.Screen
-        name="Menu"
-        component={Test3}
+        name="Menu_List"
+        component={Menu}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Menu_List',
           tabBarIcon: ({ color }) => (
             <AIcon name="home" color={color} size={26} />
           ),
@@ -28,7 +29,7 @@ const BottomNavigator = ({ navigation, route  } : any) => {
       />
       <Tab.Screen
         name="Sell"
-        component={Test2}
+        component={Sells}
         options={{
           tabBarLabel: 'Sell',
           tabBarIcon: ({ color }) => (
@@ -45,7 +46,7 @@ const BottomNavigator = ({ navigation, route  } : any) => {
       />
       <Tab.Screen
         name="Profile"
-        component={Test2}
+        component={Profile}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
