@@ -9,8 +9,9 @@ import {
 import {homeStyle} from '../../styles/home';
 import LoginModal from './LoginModal';
 import Constants from './Constants';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-export default function Home(props: any) {
+export default function Home({ navigation } : Props) {
   const [loginState, setloginState] = useState({
     flag: '',
     status: false,
@@ -28,6 +29,14 @@ export default function Home(props: any) {
       flag: value,
       status: true,
     });
+  }
+
+  const onSuccess = () => {
+    setloginState({
+      flag: '',
+      status: false,
+    });
+    navigation.navigate('Menu')
   }
 
   return (
@@ -65,7 +74,13 @@ export default function Home(props: any) {
         status={loginState.status}
         resetLoginState={resetLoginState}
         updateLoginState={updateLoginState}
+        onSuccess={onSuccess}
       />
     </ImageBackground>
   );
 }
+
+type RootStackParamList = {
+  Menu: undefined;
+};
+type Props = NativeStackScreenProps<RootStackParamList, 'Menu'>;

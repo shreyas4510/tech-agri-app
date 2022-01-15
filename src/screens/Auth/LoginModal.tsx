@@ -7,9 +7,16 @@ import {colors} from '../../assets/colors';
 import {homeStyle} from '../../styles/home';
 import Constants from './Constants';
 import OTPInputView from '@twotalltotems/react-native-otp-input'
+interface Props {
+  flag : string;
+  status : boolean;
+  resetLoginState : () => void; 
+  updateLoginState : (value : string) => void;
+  onSuccess : () => void;
+}
 
-export default function LoginModal(props: any) {
-  const {flag, status, resetLoginState, updateLoginState} = props;
+export default function LoginModal(props: Props) {
+  const {flag, status, resetLoginState, updateLoginState, onSuccess} = props;
   const [phone, setphone] = useState('');
   const [error, seterror] = useState('');
   const [ otpCode, setotpCode ] = useState("");
@@ -21,11 +28,18 @@ export default function LoginModal(props: any) {
 
   const onLogin = () => {
     console.log("Login Done");
+    setphone('')
+    seterror('')
+    setotpCode('')
+    onSuccess()
   }
 
   const onVerifyOtp = () => {
     console.log("Verfication Done");
-    
+    setphone('')
+    seterror('')
+    setotpCode('')
+    onSuccess()
   }
 
   const Signup = (
