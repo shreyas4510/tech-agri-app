@@ -127,6 +127,7 @@ export const homeStyle = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 'auto',
         fontSize: 15,
+        color : 'black'
     },
     otp_style : { 
         height: 60, 

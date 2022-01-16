@@ -21,7 +21,7 @@ const BottomNavigator = ({ navigation, route  } : any) => {
         name="Menu_List"
         component={Menu}
         options={{
-          tabBarLabel: 'Menu_List',
+          tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
             <AIcon name="home" color={color} size={26} />
           ),

@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {homeStyle} from '../../styles/home';
+import {homeStyle} from '../../styles/homeStyles';
 import LoginModal from './LoginModal';
 import Constants from './Constants';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';

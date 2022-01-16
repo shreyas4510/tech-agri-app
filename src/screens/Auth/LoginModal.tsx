@@ -4,7 +4,7 @@ import {Overlay, Card} from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
 import {Snackbar, TextInput as PaperInput} from 'react-native-paper';
 import {colors} from '../../assets/colors';
-import {homeStyle} from '../../styles/home';
+import {homeStyle} from '../../styles/homeStyles';
 import Constants from './Constants';
 import OTPInputView from '@twotalltotems/react-native-otp-input'
 interface Props {

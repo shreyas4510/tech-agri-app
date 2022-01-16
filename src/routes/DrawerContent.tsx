@@ -5,6 +5,7 @@ import { Text } from 'react-native-elements';
 import { Avatar, Drawer } from "react-native-paper";
 import IIcons from "react-native-vector-icons/Ionicons";
 import AIcons from "react-native-vector-icons/AntDesign";
+import { colors } from '../assets/colors';
 
 export default function DrawerContent(props : any) {
     return (
@@ -34,6 +35,7 @@ export default function DrawerContent(props : any) {
                             icon={({ color, size }) => (
                                 <IIcons
                                     name="settings-outline"
+                                    color={colors.muted_text}
                                     size={18}
                                 />
                             )}
@@ -50,6 +52,7 @@ export default function DrawerContent(props : any) {
                         icon={({ color, size }) => (
                             <AIcons
                                 name="logout"
+                                color={colors.muted_text}
                                 size={18}
                             />
                         )}
