@@ -4,6 +4,7 @@ import { Card } from 'react-native-paper'
 import { colors } from '../../assets/colors'
 import Dots from '../../components/PinCodeItem/Dots'
 import Keypad from '../../components/PinCodeItem/Keypad'
+import MenuHeader from '../common/MenuHeader'
 
 interface AppState {
     pincode : Array<string>;
@@ -47,19 +48,7 @@ class Sells extends Component<any, AppState>{
     render() {
         return (
             <View style={{ flex : 1 }}>
-                <View style={{ flex : 1 }}>
-                    <ImageBackground 
-                        source={{ uri : "https://www.livemorezone.com/wp-content/uploads/what-is-organic-farming.png" }} 
-                        resizeMode="cover" 
-                        style={{
-                            flex: 1,
-                            justifyContent: "center",
-                            flexDirection : 'row',
-                            alignItems : 'flex-end'
-                        }}
-                    >
-                    </ImageBackground>
-                </View>
+                <MenuHeader navigation={this.props.navigation}/>
                 <View 
                     style={{
                             flex : 2,

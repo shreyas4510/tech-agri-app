@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { Card, TextInput } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { colors } from '../../assets/colors'
+import MenuHeader from '../common/MenuHeader'
 import { Fruits, Grains, HomeMade, Pulses, Spices, Vegetables, Vehicles } from './constants'
 
 interface ItemType {
@@ -12,10 +13,10 @@ interface ItemType {
     name: string;
 }
 
-export default function Menu() {
+export default function Menu(props) {
     const renderItem = ( obj : any) => {
         return (
-            <View style={{ flex : 1, maxHeight: 160, marginHorizontal : 10, alignItems : 'center' }}>
+            <View style={{ flex : 1, maxHeight: 160, marginHorizontal : 10, alignItems : 'center' }} >
                 <Card style={{ 
                     flex : 1,
                     borderRadius : 40,
@@ -58,12 +59,7 @@ export default function Menu() {
 
     return (
         <View style={{ flex : 1 }}>
-            <View style={{ backgroundColor: 'black', flex : 1 }}>
-                <Image 
-                    source={{ uri : "https://www.livemorezone.com/wp-content/uploads/what-is-organic-farming.png" }} 
-                    style={{ width: "100%", height : "100%"}}
-                />
-            </View>
+            <MenuHeader navigation={props.navigation}/>
             <View style={{ backgroundColor : 'white', flex : 2, borderTopLeftRadius : 50, borderTopRightRadius : 50, marginTop: -50 }} >
                 <Card style={{ 
                     marginHorizontal : 60, 

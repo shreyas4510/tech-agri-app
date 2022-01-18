@@ -2,23 +2,12 @@ import React from 'react'
 import { Image, ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { Avatar, Card } from 'react-native-paper'
 import { colors } from '../../assets/colors'
+import MenuHeader from '../common/MenuHeader'
 
-export default function Profile() {
+export default function Profile(props) {
     return (
         <View style={{ flex : 1 }}>
-            <View style={{ flex : 1 }}>
-                <ImageBackground 
-                    source={{ uri : "https://www.livemorezone.com/wp-content/uploads/what-is-organic-farming.png" }} 
-                    resizeMode="cover" 
-                    style={{
-                        flex: 1,
-                        justifyContent: "center",
-                        flexDirection : 'row',
-                        alignItems : 'flex-end'
-                    }}
-                >
-                </ImageBackground>
-            </View>
+            <MenuHeader navigation={props.navigation} />
             <View 
                 // style={{ backgroundColor : 'white', flex : 2, borderTopLeftRadius : 50, borderTopRightRadius : 50, marginTop: -50 }} 
                     style={{
