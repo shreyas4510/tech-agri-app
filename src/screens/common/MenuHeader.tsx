@@ -15,13 +15,15 @@ export default function MenuHeader({ navigation }) {
                         flexDirection : 'row'
                     }}
                 >
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigation.openDrawer()
-                        }}
-                    >
-                        <FAIcon name="navicon" color="white" size={26} style={{ margin : 12 }} />
-                    </TouchableOpacity>
+                    <View style={{ maxHeight : 100, alignItems :'center', justifyContent:'center' }}>
+                        <TouchableOpacity
+                            onPress={() => {
+                                navigation.openDrawer()
+                            }}
+                        >
+                            <FAIcon name="navicon" color="white" size={26} style={{ margin : 12 }} />
+                        </TouchableOpacity>
+                    </View>
                 </ImageBackground>
             </View>
     )
