@@ -45,7 +45,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Vegetables"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                          <DrawerItem
@@ -60,7 +60,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Fruits"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                         <DrawerItem
@@ -75,7 +75,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Spices"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                         <DrawerItem
@@ -90,7 +90,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Pulses"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                         <DrawerItem
@@ -105,7 +105,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Grains"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                         <DrawerItem
@@ -120,7 +120,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Home-Made"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                         <DrawerItem
@@ -135,7 +135,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Other Crops"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                     </Drawer.Section>
@@ -152,7 +152,7 @@ export default function DrawerContent(props : any) {
                                 )}
                                 label="Vehicles"
                                 onPress={() => {
-                                    props.navigation.navigate("Settings")
+                                    props.navigation.navigate("Categories")
                                 }}
                             />
                         <DrawerItem
@@ -167,7 +167,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Labours"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Categories")
                             }}
                         />
                     </Drawer.Section>
@@ -184,7 +184,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Cart"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Cart")
                             }}
                         />
                         <DrawerItem

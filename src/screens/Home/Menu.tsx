@@ -5,7 +5,7 @@ import { Card, TextInput } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { colors } from '../../assets/colors'
 import MenuHeader from '../common/MenuHeader'
-import { Fruits, Grains, HomeMade, Pulses, Spices, Vegetables, Vehicles } from './constants'
+import { Fruits, Grains, HomeMade, Pulses, Spices, Vegetables, Vehicles } from '../../components/constants/MenuConstants'
 
 interface ItemType {
     id : string;
