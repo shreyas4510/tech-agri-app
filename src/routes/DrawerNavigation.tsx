@@ -14,7 +14,7 @@ export default function DrawerNavigator() {
     <Drawer.Navigator 
     screenOptions={({ navigation }) => ({
       drawerType: 'front',
-      headerShown: true,
+      headerShown: false,
       header: ({ navigation, route, options }) => {
         return <MainHeader label={options.drawerLabel} />
       }

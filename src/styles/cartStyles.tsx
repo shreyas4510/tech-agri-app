@@ -3,12 +3,13 @@ import { colors } from "../assets/colors";
 
 export const CartStyle = StyleSheet.create({
     used_price_style : {
-        fontSize : 24, 
+        fontSize : 20, 
         fontWeight : 'bold', 
-        color: '#d36e23'
+        color: '#63b051'
     },
     unused_price_style : {
-        fontSize : 17,
+        fontSize : 15,
+        fontWeight: 'bold', 
         fontStyle : 'italic',
         textDecorationLine : 'line-through',
         color : '#7c7c7c'

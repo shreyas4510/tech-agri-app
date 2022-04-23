@@ -19,25 +19,23 @@ export default function Cart() {
                             style={{ position : 'absolute', resizeMode : 'contain', width : "100%", height : "100%", borderRadius : 7, marginLeft : 5, marginTop : 5 }}
                         />
                             <View style={{ flexDirection: 'row' }}>
-                            {
+                        {
                             item.discount.status ? 
-                            <Badge 
-                                status="warning" 
-                                value={ `${item.discount.discount_percent}% OFF` } 
-                                textStyle={{ 
-                                    fontSize : 18, 
-                                    textAlign : 'center', 
-                                    fontWeight : '500' 
+                            <View style={{width: 60, height: 60 }}>
+                            <Image 
+                                source={require('../../assets/Images/discount_badge.png')} 
+                                style={{ 
+                                    position : 'absolute',
+                                    resizeMode : 'cover', 
+                                    width : '100%', 
+                                    height : '100%',
+                                    borderTopRightRadius: 10,
+                                    borderTopLeftRadius: 10,
+                                    alignSelf: 'flex-start',
                                 }}
-                                badgeStyle={{ 
-                                    height : 80, 
-                                    width : 80, 
-                                    borderRadius : 500, 
-                                    backgroundColor :'#7ac713', 
-                                    padding : 10,
-                                    borderColor : 'transparent' 
-                                }} 
-                            />:
+                            />
+                            <Text style={{ color: 'white', fontWeight: 'bold', marginTop:'auto', marginBottom:'auto', alignSelf: 'center' }}>{item.discount.discount_percent}%</Text>
+                        </View>:
                             <>
                             </>
                         }
@@ -48,16 +46,16 @@ export default function Cart() {
                             <Text style={{ color : '#5b5b5b', fontWeight: '600' }} >{ item.description }</Text>
                             <View style={{ flexDirection : 'row', alignItems : 'flex-end', marginBottom : 10, flex : 1 }}>
                                 <View style={{ flex : 5 }}>
-                                    <Text style={ item.discount.status ? CartStyle.unused_price_style : CartStyle.used_price_style } >Rs. { item.original_price }/kg</Text>
-                                    { item.discount.status ? <Text style={ item.discount.status && CartStyle.used_price_style } >Rs. { item.discount.discount_price }/kg</Text> : <></> }
+                                    <Text style={ item.discount.status ? CartStyle.unused_price_style : CartStyle.used_price_style } >₹ { item.original_price }/kg</Text>
+                                    { item.discount.status ? <Text style={ item.discount.status && CartStyle.used_price_style } >₹ { item.discount.discount_price }/kg</Text> : <></> }
                                 </View>
                                 <View style={{ flex : 5, flexDirection: 'row', justifyContent :'space-between', alignItems : 'center' }}>
-                                    <TouchableOpacity style={{ backgroundColor : '#f95553', width : 40, height : 40, alignItems : 'center', justifyContent : 'center', borderRadius : 7 }}>
-                                        <Text style={{ fontSize : 24 }}>-</Text>
+                                    <TouchableOpacity style={{ backgroundColor : '#f95553', width : 35, height : 35, alignItems : 'center', justifyContent : 'center', borderRadius : 7 }}>
+                                        <Text style={{ fontSize : 22, color: 'white' }}>-</Text>
                                     </TouchableOpacity>
-                                    <Text style={{ fontSize : 20, color : '#5b5b5b', fontWeight : '500' }}>{ item.amount }</Text>
-                                    <TouchableOpacity style={{ backgroundColor : '#5cc500', width : 40, height : 40, alignItems : 'center', justifyContent : 'center', borderRadius : 7 }}>
-                                        <Text style={{ fontSize : 24 }}>+</Text>
+                                    <Text style={{ fontSize : 16, color : '#5b5b5b', fontWeight : '500' }}>{ item.amount }</Text>
+                                    <TouchableOpacity style={{ backgroundColor : '#5cc500', width : 35, height : 35, alignItems : 'center', justifyContent : 'center', borderRadius : 7 }}>
+                                        <Text style={{ fontSize : 22, color: 'white' }}>+</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -72,7 +70,7 @@ export default function Cart() {
 
     return (
         <>
-            <View style={{ margin : 10 }}></View>
+            <View style={{ margin : 10, backgroundColor: 'white' }}></View>
             { 
                 BagItems.length ? 
                     <FlatList
