@@ -1,31 +1,33 @@
-import React from 'react';
-import { Image, Platform, View } from 'react-native';
+import React from "react";
+import { View } from 'react-native';
 import { Text } from 'react-native-elements';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import MAIcon from 'react-native-vector-icons/MaterialIcons'
+import LinearGradient from 'react-native-linear-gradient';
+import { Badge } from 'react-native-paper';
+import EIcon from 'react-native-vector-icons/Entypo'
+import FAIcon from 'react-native-vector-icons/FontAwesome5'
 
 interface HeaderProps {
-    label : any
+    label : any,
+    navigation : any
 }
 
 export default function MainHeader({ label } : HeaderProps) {
   return (
-    <View style={{ height :  Platform.OS === 'android' ? 55 : 70, alignItems : 'flex-end', flexDirection : 'row', marginHorizontal : 15 }}>
-        {/* <MAIcon name="keyboard-backspace" color="black" size={26} style={{ marginTop : 12 }} /> */}
-        <Text style={{ color : '#3d3a3a', fontSize : 26, fontWeight: 'bold', marginTop : 25 }}>{ label }</Text>
-        <View style={{
-            marginLeft: 'auto'
-        }}>
-        <TouchableOpacity>
-            <Image
-                style={{
-                    height: 24,
-                    width: 24,
-                }}
-                source={require('../../assets/Images/shopping-cart.png')}
-            />
-        </TouchableOpacity>
+    <LinearGradient
+        colors={['#0bab64', '#3bb78f']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 1}}
+        style={{ flex: 1, maxHeight: 100 }}
+    >
+        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 15, marginTop: 25 }}>
+            <EIcon name='chevron-left' size={24} color='white'/>
+            <Text style={{ fontSize: 18, color: '#fff', fontWeight: 'bold' }}>{label}</Text>
+            <View style={{ position: 'relative', width : 32}}>
+                <FAIcon name='shopping-cart' size={24} color='white'/>
+                <Badge style={{ position: 'absolute', marginTop: -5 }}>3</Badge> 
+            </View>
         </View>
-    </View>
+  </LinearGradient>
+
     );
 }

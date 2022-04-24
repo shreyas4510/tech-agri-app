@@ -6,11 +6,7 @@ import DrawerNavigator from './DrawerNavigation';
 const Stack = createNativeStackNavigator();
 function AppNavigator() {
   return (
-    <Stack.Navigator
-        screenOptions={{
-            headerShown: false
-        }}
-    >
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Menu" component={DrawerNavigator} />
     </Stack.Navigator>
