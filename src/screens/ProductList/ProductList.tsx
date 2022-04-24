@@ -3,7 +3,7 @@ import { FlatList, Image, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import { CategoriesItems } from '../../components/constants/CategoriesConstant';
 import { Card } from 'react-native-paper';
-import MainHeader from '../common/MainHeader';
+import MainHeader from '../common/CategoryHeader';
 
 export default function ProductList({ navigation }) {
     const renderItem = (product: any) => {

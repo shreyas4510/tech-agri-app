@@ -4,7 +4,6 @@ import BottomNavigator from "./BottomNavigation";
 import DrawerContent from "./DrawerContent";
 import Settings from "../screens/Settings/Settings";
 import Cart from "../screens/Cart/Cart";
-import MainHeader from "../screens/common/MainHeader";
 import ProductList from "../screens/ProductList/ProductList";
 
 const Drawer = createDrawerNavigator();
