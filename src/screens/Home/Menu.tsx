@@ -58,8 +58,7 @@ export default function Menu(props) {
     )
 
     return (
-        <View style={{ flex : 1 }}>
-            <MenuHeader navigation={props.navigation}/>
+        <MenuHeader navigation={props.navigation}>
             <View style={{ backgroundColor : 'white', flex : 2, borderTopLeftRadius : 50, borderTopRightRadius : 50, marginTop: -50 }} >
                 <Card style={{ 
                     marginHorizontal : 60, 
@@ -142,7 +141,7 @@ export default function Menu(props) {
                     { renderListView(Vehicles, "Vehicles") }
                 </ScrollView>
             </View>
-        </View>
+        </MenuHeader>
     )
 }
 

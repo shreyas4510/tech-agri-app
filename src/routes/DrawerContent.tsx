@@ -46,7 +46,9 @@ export default function DrawerContent(props : any) {
                             )}
                             label="Vegetables"
                             onPress={() => {
-                                props.navigation.navigate("Categories")
+                                // temporary kept this way
+                                props.navigation.push("Categories");
+                                props.navigation.navigate("Categories");
                             }}
                         />
                          <DrawerItem
@@ -184,6 +186,8 @@ export default function DrawerContent(props : any) {
                             label="Cart"
                             onPress={() => {
                                 props.navigation.navigate("Cart")
+                                // temporary kept this way
+                                props.navigation.push("Cart")
                             }}
                         />
                         <DrawerItem
@@ -196,7 +200,7 @@ export default function DrawerContent(props : any) {
                             )}
                             label="My Account"
                             onPress={() => {
-                                props.navigation.navigate("Settings")
+                                props.navigation.navigate("Profile")
                             }}
                         />
                         <DrawerItem

@@ -5,8 +5,9 @@ import { colors } from '../../assets/colors';
 import { BagItems } from '../../components/constants/BagConstants';
 import { CartStyle } from '../../styles/cartStyles';
 import { Badge } from 'react-native-elements';
+import CategoryHeader from '../common/CategoryHeader';
 
-export default function Cart() {
+export default function Cart({ navigation }) {
 
     const renderItem = ( cartObject : any) => {
         const { item } = cartObject        
@@ -69,31 +70,32 @@ export default function Cart() {
     } 
 
     return (
-        <>
-            <View style={{ margin : 10, backgroundColor: 'white' }}></View>
-            { 
-                BagItems.length ? 
-                    <FlatList
-                        data={BagItems}
-                        renderItem={renderItem}
-                        style={{ marginHorizontal: 10 }}
-                        showsHorizontalScrollIndicator={false}
-                        showsVerticalScrollIndicator={false}
-                        keyExtractor={item => item.id.toString()}
-                    />   
-                :
-                    <View style={{ flex : 1, flexDirection : 'row', marginVertical : 100 }} >
-                        <Text style={{ color : 'black', flex : 1, fontSize : 25, fontWeight : '500', textAlign : 'center', marginTop : 25 }}>
-                            Your basket is empty
-                        </Text>
-                        <View style={{ flex : 1, alignItems : 'center' }}>
-                            <Image 
-                                source={require('../../assets/Images/empty_cart.gif')} 
-                                style={{ resizeMode : 'contain', width : 100, height : 100 }}
-                            />
+        <CategoryHeader style={{ flex: 1 }} label={"Cart"} navigation={navigation}>
+            <View style={{ flex:4, borderTopLeftRadius: 30, borderTopRightRadius: 30, marginTop: -30, paddingTop: 10, backgroundColor: 'white' }}>
+                { 
+                    BagItems.length ? 
+                        <FlatList
+                            data={BagItems}
+                            renderItem={renderItem}
+                            style={{ marginHorizontal: 10 }}
+                            showsHorizontalScrollIndicator={false}
+                            showsVerticalScrollIndicator={false}
+                            keyExtractor={item => item.id.toString()}
+                        />   
+                    :
+                        <View style={{ flex : 1, flexDirection : 'column', marginVertical : 100 }} >
+                            <Text style={{ color : 'black', flex : 1, fontSize : 25, fontWeight : '500', textAlign : 'center', marginTop : 25 }}>
+                                Your basket is empty
+                            </Text>
+                            <View style={{ flex : 1, alignItems : 'center' }}>
+                                <Image 
+                                    source={require('../../assets/Images/empty_cart.gif')} 
+                                    style={{ resizeMode : 'contain', width : 100, height : 100 }}
+                                />
+                            </View>
                         </View>
-                    </View>
-            }
-        </>
+                }
+            </View>
+        </CategoryHeader>
         );
 }

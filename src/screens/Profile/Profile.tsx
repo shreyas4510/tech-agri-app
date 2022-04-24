@@ -6,8 +6,7 @@ import MenuHeader from '../common/MenuHeader'
 
 export default function Profile(props) {
     return (
-        <View style={{ flex : 1 }}>
-            <MenuHeader navigation={props.navigation} />
+        <MenuHeader navigation={props.navigation} >
             <View 
                 // style={{ backgroundColor : 'white', flex : 2, borderTopLeftRadius : 50, borderTopRightRadius : 50, marginTop: -50 }} 
                     style={{
@@ -76,7 +75,7 @@ export default function Profile(props) {
                     </ScrollView>
                 </View>
             </View>
-        </View>
+        </MenuHeader>
     )
 }
 

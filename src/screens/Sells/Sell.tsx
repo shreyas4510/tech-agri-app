@@ -47,8 +47,7 @@ class Sells extends Component<any, AppState>{
 
     render() {
         return (
-            <View style={{ flex : 1 }}>
-                <MenuHeader navigation={this.props.navigation}/>
+            <MenuHeader navigation={this.props.navigation}>
                 <View 
                     style={{
                             flex : 2,
@@ -77,7 +76,7 @@ class Sells extends Component<any, AppState>{
                         </ScrollView>
                     </View>
                 </View>
-            </View>
+            </MenuHeader>
         );
     }
 }

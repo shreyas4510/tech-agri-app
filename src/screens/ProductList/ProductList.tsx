@@ -3,7 +3,7 @@ import { FlatList, Image, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import { CategoriesItems } from '../../components/constants/CategoriesConstant';
 import { Card } from 'react-native-paper';
-import MainHeader from '../common/CategoryHeader';
+import CategoryHeader from '../common/CategoryHeader';
 
 export default function ProductList({ navigation }) {
     const renderItem = (product: any) => {
@@ -61,24 +61,23 @@ export default function ProductList({ navigation }) {
     }
 
   return (
-    <View style={{ flex: 1 }}>
-        <MainHeader label={"Test"} navigation={navigation}/>
-        <View style={{ flex: 4, borderTopLeftRadius: 30, borderTopRightRadius: 30, marginTop: -30, backgroundColor: 'white' }}>
-            {
-                CategoriesItems.length ? 
-                    <FlatList
-                        data={CategoriesItems}
-                        renderItem={renderItem}
-                        numColumns={2}
-                        style={{ marginHorizontal: 10, marginVertical: 15, backgroundColor: 'white' }}
-                        showsHorizontalScrollIndicator={false}
-                        showsVerticalScrollIndicator={false}
-                        keyExtractor={item => item.id.toString()}
-                    />
-                :
-                    <></>
-            }
-        </View>
-    </View>
+        <CategoryHeader style={{ flex: 1 }} label={"Test"} navigation={navigation}>
+            <View style={{ flex: 4, borderTopLeftRadius: 30, borderTopRightRadius: 30, marginTop: -30, backgroundColor: 'white' }}>
+                {
+                    CategoriesItems.length ? 
+                        <FlatList
+                            data={CategoriesItems}
+                            renderItem={renderItem}
+                            numColumns={2}
+                            style={{ marginHorizontal: 10, marginVertical: 15, backgroundColor: 'white' }}
+                            showsHorizontalScrollIndicator={false}
+                            showsVerticalScrollIndicator={false}
+                            keyExtractor={item => item.id.toString()}
+                        />
+                    :
+                        <></>
+                }
+            </View>
+        </CategoryHeader>
   );
 }
