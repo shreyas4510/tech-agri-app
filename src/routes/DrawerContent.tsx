@@ -1,4 +1,4 @@
-import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer'
+import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer'
 import React from 'react'
 import { View, Image } from 'react-native'
 import { Text } from 'react-native-elements';
@@ -7,6 +7,7 @@ import IIcons from "react-native-vector-icons/Ionicons";
 import AIcons from "react-native-vector-icons/AntDesign";
 import { colors } from '../assets/colors';
 import EIcon from 'react-native-vector-icons/FontAwesome';
+import FAIcon from 'react-native-vector-icons/FontAwesome5'
 
 const ICON_SIZE = 18;
 export default function DrawerContent(props : any) {
@@ -174,12 +175,10 @@ export default function DrawerContent(props : any) {
                     <Drawer.Section>
                         <DrawerItem
                             icon={({ color, size }) => (
-                                <Image
-                                    style={{
-                                    height: ICON_SIZE,
-                                    width: ICON_SIZE,
-                                    }}
-                                    source={require('../assets/Images/cart.png')}
+                                <FAIcon 
+                                    name='shopping-cart' 
+                                    size={ICON_SIZE} 
+                                    color={color}
                                 />
                             )}
                             label="Cart"
