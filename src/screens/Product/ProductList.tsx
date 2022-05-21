@@ -9,11 +9,16 @@ export default function ProductList({ navigation }) {
     const renderItem = (product: any) => {
         const {item} = product 
         return (
-            <Card style={{ flex: 1, margin: 10, borderRadius: 10, height: 230, shadowColor: "#7c7c7c",
+            <Card 
+            style={{ flex: 1, margin: 10, borderRadius: 10, height: 230, shadowColor: "#7c7c7c",
             shadowOffset: { width: 0, height: 1 },
             shadowOpacity: 0.8,
             shadowRadius: 1,
-            elevation : 8 }}>
+            elevation : 8 }}
+            onPress={() => {
+                navigation.navigate("ProductDetails")
+            }}
+            >
                     <View style={{ flex : 2, position :'relative'}}>
                         <Image 
                             source={{ uri: item.image_url }} 

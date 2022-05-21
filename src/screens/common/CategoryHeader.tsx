@@ -26,7 +26,6 @@ export default function CategoryHeader({ label, navigation, ...rest }: any) {
                 </TouchableOpacity>
                 <Text style={{ fontSize: 18, color: '#fff', fontWeight: 'bold' }}>{label}</Text>
                 <TouchableOpacity onPress={() => { navigation.navigate("Cart"); }} >
-                    
                             <View style={{ position: 'relative', width : 32}}>
                             {
                                 label !== "Cart" ?
